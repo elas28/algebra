@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Provjera</title>
 </head>
 <body>
-    
+    <p>
+    <label>Ime i prezime *</label>
+    <form name="imeiprezime" action="" method="GET">
+        
+            <input type="text" placeholder="Vaše ime i prezime" size="30" required  />
+    </form>
+    </p>
+    <label>E-mail adresa *</label>
+     <form name="email" action="" method="GET">
+        <p>
+                <input type="email" placeholder="Upišite valjanu e-mail adresu" size="40" required  />
+         </p>
+     </form>
+     <label>Kontakt broj telefona</label>
+     <form name="telefon" action="" method="GET">
+        <p>
+                <input type="number"  size="30" />
+         </p>
+     </form>
+    <label>Datum rođenja</label>
+    <form name="dateofbirth" action="" method="GET">
+       <p>
+               <input type="date"  size="20" />
+        </p>
+    </form>
+    <label>Koje jezike govorite?</label>
+    <form name="jezik" action="" method="GET">
+       <p>
+        <label for="jezik1"> Engleski</label>       
+        <input type="checkbox" id="jezik1" name="jezik1" value="Engleski" />
+        <label for="jezik2"> Talijanski</label>       
+        <input type="checkbox" id="jezik2" name="jezik2" value="Talijanski" />
+        <label for="jezik3"> Njemački</label>       
+        <input type="checkbox" id="jezik3" name="jezik3" value="Njemački" />
+        <label for="jezik4"> Francuski</label>       
+        <input type="checkbox" id="jezik4" name="jezik4" value="Francuski" />
+        <label for="jezik5"> Španjolski</label>       
+        <input type="checkbox" id="jezik5" name="jezik5" value="Španjolski" />
+
+        </p>
+    </form>
+    <label>Da li ste do sada koristili usluge naše tvrtke?</label>
+    <form name="question" action="" method="GET">
+       <p>
+        <label for="question"> Da</label>
+               <input type="radio" id="question" name="question" value="Da" >
+               <label for="question"> Ne</label>
+               <input type="radio" id="question" name="question" value="NE" >    
+        </p>
+    </form>
+    <label>Priložite životopis</label>
+    <form name="dokument" action="" method="GET">
+       <p>
+               <input id="dokument" name="dokument" type="file"   />
+        </p>
+    </form>
+    <p>
+        <input type="reset" value="Poništi">
+        <input type="submit" value="Prijavi se">
+    </p>
+
+
 </body>
 </html>
