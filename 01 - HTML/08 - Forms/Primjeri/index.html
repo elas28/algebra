@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrasci</title>
+</head>
+<body>
+    <form name="obrazac1" action="" method="POST">
+        <p>
+            <label for="name">First name</label><br/>
+            <input type="text" placeholder="John" size="20" required id="name" name="firstName"/>
+        </p>
+
+        <p>
+            <label for="email">Email</label><br/>
+            <input type="email" id="email" size="25" placeholder="john.doe@example.com" name="email" required/>
+        </p>
+
+        <p>
+            <label for="OIB">PIN</label><br/>
+            <input type="text" id="OIB" placeholder="12345678912" maxlength="11" name="OIB"/>
+        </p>
+
+        <p>
+            <label for="password">Password</label><br/>
+            <input type="password" id="password" name="password" disabled/>
+        </p>
+
+        <p>
+            <label for="color">Color</label><br/>
+            <input type="color" id="color" name="color"/>
+        </p>
+
+        <p>
+            <input id="newsletter" name="newsletter" type="checkbox"/>
+            <label for="newsletter">I want to subscribe to newsletter</label>
+        </p>
+
+        <p>
+            Rate our services<br/>
+            <label for="1">1</label>
+            <input type="radio" name="rating" id="1" value="1"/>
+
+            <label for="2">2</label>
+            <input type="radio" name="rating" id="2" value="2"/>
+
+            <label for="3">3</label>
+            <input type="radio" name="rating" id="3" value="3"/>
+        </p>
+
+        <p>
+            <label for="file">Upload file</label><br/>
+            <input type="file" id="file" name="file" multiple />
+        </p>
+
+        <p>
+            <label for="issue">Describe the issue (max 100 chars)</label><br/>
+            <textarea id="issue" name="issue" cols="45" rows="10" maxlength="100"></textarea>
+        </p>
+
+        <p>
+            <label for="country">Country</label><br/>
+            <select id="country" name="country">
+                <option value="Croatia">Croatia</option>
+                <option value="Slovenia" selected>Slovenia</option>
+                <option value="Serbia">Serbia</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="city">City</label><br/>
+            
+            <input id="city" type="text" list="cityList">
+            <datalist id="cityList">
+                <option value="Zagreb">Zagreb</option>
+                <option value="Paris">Paris</option>
+                <option value="Rome">Rome</option>
+            </datalist>
+        </p>
+
+        <p>
+            <input name="reset" type="reset" value="Reset form">
+            <input name="submit" type="submit" value="Submit form">
+        </p>
+    </form>
+</body>
+</html>

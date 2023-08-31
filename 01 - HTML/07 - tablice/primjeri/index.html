@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+    <!-- <style>
+        td{
+            border: 1px solid #333;
+        }
+    </style> -->
+</head>
+
+<body>
+  <table style="border: 1px solid black; width: 100%; text-align: center;">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>y</td>
+            <td>z</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table style="border: 1px dashed skyblue; width: 100%; text-align: center;">
+        <tr>
+            <th>Employee</th>
+            <th>Employe Serial Number</th>
+            <th>Supervisor</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>E123456</td>
+            <td>Mary Jane</td>
+        </tr>
+        <tr>
+            <td>Sanja Perica</td>
+            <td>E382922</td>
+            <td>Ivana Horvat</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table style="border: 1px solid #333; width: 100%; text-align: center;">
+        <caption style="caption-side: bottom;">2023 Home Budget Calculation</caption>
+        <!-- <thead> koristimo da HEADER stvari grupiramo unutar tablice -->
+        
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Salaray</th>
+                <th>Food Expenses</th>
+                <th>Entertainment Expenses</th>
+                <th>Car Expenses</th>
+            </tr>
+        </thead>
+
+        <!-- <tbody> koristimo da BODY (podatke unutar tablice) grupiramo unutar tablice -->
+
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>$3500</td>
+                <td>$600</td>
+                <td>$300</td>
+                <td>$400</td>
+            </tr>
+
+            <tr>
+                <td>February</td>
+                <td>$3300</td>
+                <td>$900</td>
+                <td>$0</td>
+                <td>$600</td>
+            </tr>
+
+            <tr>
+                <td>March</td>
+                <td>$3700</td>
+                <td>$500</td>
+                <td>$1000</td>
+                <td>$0</td>
+            </tr>
+        </tbody>
+
+        <!-- <tfoot> koristimo da FOOTER (podatke unutar tablice u footeru (npr. suma) grupiramo unutar tablice -->
+
+        <tfoot>
+            <tr>
+                <td><b>SUM</b></td>
+                <td>$9000</td>
+                <td>$1400</td>
+                <td>$1300</td>
+                <td>$1000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <table style="border: 1px solid blue; text-align: center; width: 100%;">
+        <!-- <tr>
+            <td>Numbers</td>
+        </tr> -->
+        <tr>
+            <td>1</td>
+            <td colspan="2">2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="3">6</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
