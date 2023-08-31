@@ -50,6 +50,23 @@ div:nth-of-type(4) {
     transition: transform 0.5s;
 }
 
-div:nth-of-type(4) {
-    transform: translate(500px, 0);
+div:nth-of-type(4):hover {
+    transform: rotate(180deg);
+}
+
+div:nth-of-type(5) {
+    transition: background-color 1s ease, transform 0.5s ease-in-out;
+}
+
+div:nth-of-type(5):hover {
+    background: red;
+    transform: scale(1.2, 2) skew(10deg, 5deg);
+}
+
+div:nth-of-type(6) {
+    transition: opacity 1s ease 2s;
+}
+
+div:nth-of-type(6):hover {
+    opacity: 0.2;
 }
