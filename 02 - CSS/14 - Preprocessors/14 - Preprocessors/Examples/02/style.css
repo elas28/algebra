@@ -1,0 +1,41 @@
+body {
+  background-color: #eee;
+  color: #333;
+  font-family: Verdana, Tahoma, sans-serif;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: #eee;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  color: #800;
+}
+header p {
+  font-size: 20px;
+}
+header a {
+  color: yellow;
+}
+header a:hover {
+  color: blue;
+}
+header a:active {
+  color: pink;
+}
+
+section h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+section p {
+  text-align: justify;
+}
+section a {
+  color: aliceblue;
+}/*# sourceMappingURL=style.css.map */
