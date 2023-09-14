@@ -42,26 +42,6 @@ body {
   /* (100-32*3)/2 */
 }
 
-/* Uređaji manji od 1024px */
+/* Svi uređaji širine manje od 1024px */
 
-/* Uređaji manji od 479px, portret */
-@media all and (max-width: 1023px) {
-  .flex-item {
-      flex: 0 49%;
-      height: 48%;
-  }
-
-  .wrapper div{
-    background-color: blueviolet;
-  }
-}
-
-@media (max-width: 479px) and (orientation: portrait) {
-  .flex-item {
-      flex: 0 100%;
-      height: 24%;
-  }
-  .wrapper div{
-    background-color:fuchsia;
-  }
-}
+/* Svi uređaji širine manje od 480px (portrait mobiteli) */

@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -25,18 +26,17 @@ div {
   position: relative;
 }
 
-/* name duration timing-function delay iteration-count direction fill-mode play-state */
+/* animacija */
 
 /* Animacija za 1. DIV element */
-
 @keyframes animacija1 {
-  from {
+  0% {
     left: 0;
   }
 
-  to {
-    left: 100px;
-    background-color: #fff0f8;
+  100% {
+    left: 1000px;
+    background: #fff0f8;
   }
 }
 
@@ -47,8 +47,8 @@ div:first-of-type {
 /* Animacija za 2. DIV element */
 @keyframes animacija2 {
   0% {
-    left: 0px;
-    transform: rotate(90deg);
+    left: 0;
+    transform: rotate(0deg);
   }
 
   50% {
@@ -69,8 +69,8 @@ div:nth-of-type(2) {
 /* Animacija za 3. DIV element */
 @keyframes animacija3 {
   0% {
-    left: 0px;
-    transform: rotate(90deg);
+    left: 0;
+    transform: rotate(0deg);
   }
 
   50% {
@@ -84,13 +84,12 @@ div:nth-of-type(2) {
   }
 }
 
-/* timing-functions: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end |steps (int, start | end) */
+/* timing-functions: linear | ease | ease-in | ease-out |ease-in-out | step-start | step-end |steps (int, start | end) */
 div:nth-of-type(3) {
   animation: animacija3 2s ease-in-out 2s;
 }
 
 /* Animacija za 4. DIV element */
-
 @keyframes animacija4 {
   0% {
     left: 0;
@@ -105,14 +104,12 @@ div:nth-of-type(3) {
   }
 }
 
-/* name duration timing-function delay iteration-count direction fill-mode play-state */
-
+/* animation-iteration-count: number | infinite */
 div:nth-of-type(4) {
-  animation: animacija4 4s ease-in-out infinite;
+  animation: animacija4 4s ease-in-out 2s infinite;
 }
 
 /* Animacija za 5. DIV element */
-
 @keyframes animacija5 {
   0% {
     left: 0;
@@ -123,17 +120,16 @@ div:nth-of-type(4) {
   }
 }
 
-/*  animation direction: normal | reverse | alternate | alternate-reverse */
+/*  animation direction: normal | reverse| alternate | alternate-reverse */
 div:nth-of-type(5) {
-  animation: animacija5 4s ease-in infinite alternate;
+  animation: animacija5 4s ease-in 2 alternate;
 }
 
 /* Animacija za 6. DIV element */
-
 @keyframes animacija6 {
   0% {
     left: 0;
-    background-color: red;
+    background: red;
   }
 
   100% {
@@ -141,13 +137,12 @@ div:nth-of-type(5) {
   }
 }
 
-/* animation fill mode: none | forwards | backwards | both  */
+/* animation fill mode: none | forwards | backwards| both  */
 div:nth-of-type(6) {
   animation: animacija6 4s ease-in 2s forwards;
 }
 
 /* Animacija za 7. DIV element */
-
 @keyframes animacija7 {
   0% {
     left: 0;
@@ -162,6 +157,7 @@ div:nth-of-type(6) {
   }
 }
 
+/* animation-iteration-count: number | infinite */
 div:nth-of-type(7) {
   animation: animacija7 10s ease-in-out infinite;
 }

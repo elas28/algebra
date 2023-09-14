@@ -23,8 +23,6 @@ body {
 }
 
 .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
 
@@ -36,7 +34,6 @@ body {
 }
 
 .flex-item {
-  flex-grow: 0;
   flex-basis: 32%;
   width: 24%;
 }

@@ -9,8 +9,6 @@ body {
 }
 
 .wrapper {
-    border: 1px dashed #666;
-    height: 600px;
     padding: 1em;
 }
 
@@ -22,21 +20,24 @@ body {
 }
 
 .flex-container {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* flex-start | flex-end | center | space-between | space-around | space-evenly */
-    align-content: space-between;
-    /* flex-start | flex-end | center | space-between | space-around | stretch */
 }
 
 .flex-item {
     flex-basis: 32%;
-    height:100px;
-    margin-bottom:2%;
-
+    height: 100px;
+    margin-bottom: 2%;
 }
 
-.flex-item:nth-child(4n+1) {
-    flex-basis:100%;
+/*
+( 4n ) + 1 = nešto...
+
+(4 x 0) + 1 = 1 => 1. Element
+(4 x 1) + 1 = 5 => 5. Element
+(4 x 2) + 1 = 9 => 9. Element
+*/
+.flex-item:nth-child(4n + 1) {
+    flex-basis: 100%;
 }
