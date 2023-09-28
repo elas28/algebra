@@ -1,17 +1,15 @@
 /************************************ 
 Simple Function Example
 *********************************** */
-
 function nameOfFunction() {
-    // function body
+    // function body   
 }
 
-function greet() {
+function greet() { // declaring a function named greet()
     console.log('Hello there');
 }
 
 greet(); // function call
-
 
 /************************************ 
 Example 1: Function with Parameters
@@ -27,7 +25,6 @@ greet(student); // calling function
 /************************************ 
 Example 2: Self Invoking Function - BMI Calculator
 *********************************** */
-
 (function calculateBMI() {
     let result;
     let person = prompt('Please enter your name: ', '');
@@ -37,24 +34,23 @@ Example 2: Self Invoking Function - BMI Calculator
     result = weight / (height * 2);
 
     alert(result.toFixed(2));
-})(); // () za automatsko pozivanje funkcije
+})();
 
 /************************************ 
 Example 3: Adding two numbers
 *********************************** */
-
 function add(a, b) {
     console.log(a + b);
 }
 
-add(3, 4);
-add(2, 9);
+add(3, 4); // calling functions
+add(2, 9); // calling functions
 
 /************************************ 
 Example 4: Variable as function
 *********************************** */
 let add = function (value) {
-    console.log(value + 1);
+    return console.log(value + 1);
 }
 
 let result = add(1);
