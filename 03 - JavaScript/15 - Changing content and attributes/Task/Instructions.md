@@ -4,9 +4,9 @@
 
 2. HTML dokument (index.html) treba promijeniti pomoću JS-a i HTML DOM API-ja tako da:
 	- H1 element sadrži tekst "Karlovac"
-	- SPAN u description div-u je zamijenjen h3 elementom sa tekstom "5 rijeka" 
-	- DIV s klasom "info" sadrži text "Peta rijeka je piva."
-	- Lista u footer elementu izlistava svih 5 karlovačkih rijeka u li elementima
+	- SPAN u description div-u je zamijenjen strong elementom sa tekstom "5 rijeka" 
+	- DIV s klasom "info" sadrži tekst "Peta rijeka je piva."
+	- Lista u footer elementu izlistava svih 5 karlovačkih rijeka u li elementima (SAVJET: koristite niz)
 	
 3. Imate zadane vrijednosti:
 	- pageOffsetY elementa je 1300px

@@ -1,8 +1,8 @@
 function displayTime() {
-    document.getElementById('time').innerText = new Date().getFullYear();
+    document.getElementById('time').innerHTML = Date();
 }
 
 function getName() {
-    var name = document.getElementById('name').value;
-    document.getElementById('firstName').innerHTML = `Your name is ${name}`;
+    let name = document.getElementById('name').value;
+    document.getElementById('firstName').innerHTML = 'Your name is: ' + name;
 }

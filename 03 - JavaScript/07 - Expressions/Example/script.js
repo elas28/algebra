@@ -80,12 +80,6 @@ switch (new Date().getDay()) {
         break;
 }
 
-var count = 0; // Inicijalizacija i deklaracija varijable count
-do { // Do = NAPRAVI OVO (kod ispod)
-    console.log(count); // Console logaj COUNT 
-    count++; // Povećaj count za 1
-} while (count < 10); // DOKLE GOD je COUNT < 10
-
 
 /* 
  * For Loop (i = iterable)
@@ -93,13 +87,19 @@ do { // Do = NAPRAVI OVO (kod ispod)
  * i < 10 = complete this block of code as long as i is smaller than 10
  * i++ = every time you run this block code, increase i by 1 (i++)
  */
-for (var i = 1; i < 10; i++) {
-    console.log('Current counter is ' + i);
+
+for (let i = 1; i < 10; i++) {
+    console.log('Current counter is ' + i)
 }
 
-var numberOfGreetings = 3;
-var welcomeMessage = 'Hello, Nino.';
+let count = 0; // Inicijalizacija i deklaracija varijable count
+do { // Do = NAPRAVI OVO (kod ispod)
+    console.log(count) // Console logaj COUNT
+    count++; // Povećaj count za 1
+} while (count < 10); // DOKLE GOD je COUNT < 10
 
+const numberOfGreetings = 3;
+let welcomeMessage = "Hello";
 for (let i = 0; i < numberOfGreetings; i++) {
     console.log(welcomeMessage);
 }

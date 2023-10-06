@@ -1,4 +1,4 @@
-/* 1.
+// 1.
 let x = "John Doe";
 function vratiNesto(name) {
    let x = name;
@@ -7,10 +7,3 @@ function vratiNesto(name) {
 }
 let y = vratiNesto("Jane Doe");
 let z = vratiNesto()();
-*/
-var x='name';
-(function(){
-   return x;
-})(x);
-
-console.log(x);

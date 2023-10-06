@@ -25,6 +25,7 @@ document.body.insertBefore(info, description.nextSibling);
 
 // 3. 5 praznih li elemenata
 var ul = document.querySelector('ul');
+
 for (var i = 0; i < 2; i++) {
     var li = document.createElement('li');
     ul.appendChild(li);

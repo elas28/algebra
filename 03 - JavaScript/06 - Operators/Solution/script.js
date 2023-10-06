@@ -4,21 +4,6 @@ var x = 'Lorem ipsum',
 q = false;
 
 // 1. 
-/* 
-
-The expression var trueFalse = !!”false” == !!”true”; can be broken down as follows:
-
-"false" and "true" are both strings.
-The double exclamation marks (!!) in JavaScript are used to convert a value into its corresponding boolean representation. 
-They essentially check if a value is "truthy" or "falsy."
-So, let's break it down step by step:
-
-!!"false" will first convert the string "false" into its boolean representation, which is true because any non-empty string is considered "truthy." Then, the second !! negates it, so it becomes false.
-Similarly, !!"true" will convert the string "true" into its boolean representation, which is also true. Then, the second !! negates it, so it becomes false.
-Now, we have false == false, which is a comparison between two booleans with the same value, false. This comparison will evaluate to true.
-
-So, the variable trueFalse will be assigned the value true.
-*/
 var trueFalse = !!'false' == !!'true'; // true
 
 // 2. 

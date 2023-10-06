@@ -1,7 +1,6 @@
 function updateTemperatureDOM() {
     var temperature = Math.round(Math.random() * 80 - 35);
-
-    document.querySelector('.temperature').innerHTML = `${temperature}°C`;
+    document.querySelector('.temperature').textContent = `${temperature}°C`;
 
     if (temperature > 40) {
         document.body.style.backgroundColor = '#FF4D00';
@@ -16,4 +15,6 @@ function updateTemperatureDOM() {
 
 document.querySelector('button').addEventListener('click', updateTemperatureDOM);
 
-window.addEventListener('load', updateTemperatureDOM);
+window.addEventListener("load", (event) => {
+    updateTemperatureDOM();
+});

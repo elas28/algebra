@@ -1,3 +1,4 @@
+
 /*
 * TO CELSISU FUNCTION
 * Expected output: 130ºF equals to 54.44ºC
@@ -7,7 +8,8 @@ function toCelsius(fahrenheit) {
     return `${fahrenheit}ºF equals to ${((5 / 9) * (fahrenheit - 32)).toFixed(2)}ºC`;
 }
 
-console.log(toCelsius(130));
+console.log(toCelsius(130))
+
 
 /* 
 *  FUNCTION THAT CAN SUM MULTIPLE NUMBERS
@@ -20,7 +22,7 @@ function add() {
     return sum;
 }
 
-console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
+console.log(add(1, 2, 3, 4, 5));
 
 /* 
 *  BMI CALCULATOR
@@ -28,9 +30,7 @@ console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
     Normal weight = 18.5–24.9. 
     Overweight = 25–29.9. 
     Obesity = BMI of 30 or greater.
-    https://medium.com/trabe/using-switch-true-in-javascript-986e8ad8ae4f
 */
-
 (function calculateBMI() {
     let result;
     let person = prompt('Please enter your name: ', '');
@@ -61,7 +61,6 @@ console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
 /* 
 *   Dynamic Functions for Calculations
 */
-
 function calculate(operator, num1, num2) {
     switch (operator) {
         case '+':

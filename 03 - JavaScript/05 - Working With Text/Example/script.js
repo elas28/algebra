@@ -27,7 +27,7 @@ const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barke
 const searchTerm = 'dog';
 const indexOfFirst = paragraph.indexOf(searchTerm);
 
-console.log('Search term found at ' + indexOfFirst) // 40 - shows where search term starts, ignores empty spaces
+console.log('Searc term found at ' + indexOfFirst) // 40 - shows where search term starts, ignores empty spaces
 
 const secondTerm = paragraph.indexOf(searchTerm, (indexOfFirst + 1));
 
