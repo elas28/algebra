@@ -1,34 +1,30 @@
 const chef = {
   prepareDish(dishName) {
-    // Implement the chef's logic
+    console.log(`Chef is preparing ${dishName}`);
   },
 };
 
 const waiter = {
   takeOrder(tableNumber, dishName) {
-    // Implement the waiter's logic for taking an order
+    console.log(
+      `Waiter is taking an order for ${dishName} at table ${tableNumber}`
+    );
   },
   serveDish(tableNumber, dishName) {
-    // Implement the waiter's logic for serving a dish
+    console.log(`Waiter is serving ${dishName} to table ${tableNumber}`);
   },
 };
 
-function placeOrder(tableNumber, dishName, chef) {
-  // Implement the order placement logic
+function placeOrder(dishName, tableNumber, chef) {
+  // Simulate the order placement process
+  waiter.takeOrder.call(waiter, tableNumber, dishName);
+  chef.prepareDish.call(chef, dishName);
+  waiter.serveDish.call(waiter, tableNumber, dishName);
 }
 
 // Create the partially applied function orderSteak using bind
+const orderSteak = placeOrder.bind(null, "Steak");
 
 // Test the functionality
-placeOrder(1, "Steak", chef);
-placeOrder(2, "Pasta", chef);
-// Use the partially applied orderSteak function
-
-/*
-Waiter is taking an order for Pasta at table 1
-Chef is preparing Pasta
-Waiter is serving Pasta to table 1
-Waiter is taking an order for Steak at table 2
-Chef is preparing Steak
-Waiter is serving Steak to table 2
-*/
+placeOrder("Pasta", 1, chef);
+orderSteak(2, chef);
