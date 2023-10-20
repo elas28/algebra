@@ -19,6 +19,7 @@ anime({
   },
 });
 
+// Timeout Funkcija
 setTimeout(() => {
   document.getElementsByClassName("loading")[0].style.display = "none";
 }, 1000);
@@ -165,6 +166,17 @@ function createTaskListItem(task) {
   checkEmpty();
 }
 
+fetch(api_url)
+  .then((response) => response.json())
+  .then((data) =>
+    data.forEach((task) => {
+      createTaskListItem(task);
+    })
+  )
+  .catch((error) => {
+    console.error("Error: ", error);
+  });
+
 // Task Creation Function
 function newTask() {
   const input = document.getElementById("inputField").value;
@@ -190,8 +202,27 @@ function newTask() {
     id: newId,
   };
 
-  createTaskListItem(task);
-  document.getElementById("inputField").value = null;
+  fetch(api_url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(task),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(
+          `Request failed with status ${response.status}: ${response.statusText}`
+        );
+      } else {
+        createTaskListItem(task);
+        document.getElementById("inputField").value = null;
+        console.log("Resource posted successfully.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error: ", error);
+    });
 }
 
 // Event delegation for input field keypress
@@ -203,8 +234,23 @@ document.getElementById("inputField").addEventListener("keypress", (event) => {
 
 // Delete Task
 function handleResourceDeletion(element) {
-  element.remove();
-  checkEmpty();
+  fetch(`${api_url}/${element.dataset.id}`, {
+    method: "DELETE",
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(
+          `Request failed with status ${response.status}: ${response.statusText}`
+        );
+      } else {
+        element.remove();
+        checkEmpty();
+        console.log("Resource deleted successfully.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error: ", error);
+    });
 }
 
 // Main Functionalities of To Do Task App - Event Listeners ✨
@@ -228,6 +274,26 @@ document.getElementById("list").addEventListener("click", (event) => {
       listItem.dataset.completed == "true"
         ? (listItem.dataset.completed = "false")
         : (listItem.dataset.completed = "true");
+
+    fetch(`${api_url}/${listItem.dataset.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ completed: taskCompletionStatus }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `Request failed with status ${response.status}: ${response.statusText}`
+          );
+        } else {
+          console.log("Resource updated successfully.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error: ", error);
+      });
   }
 });
 
